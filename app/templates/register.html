@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+
+    .form-group {
+        margin-bottom: 0rem;
+    }
+</style>
+
+<div class="container">
+
+    <div class="col-md-12">
+
+    <form class="form-group" method="POST">
+        {{form.hidden_tag()}}
+
+        <div class="form-group">
+            {{form.name.label(class="form-control-label ")}}{{form.name(class="form-control form-control-lg")}} <br>
+            
+        </div>
+
+       
+        <div class="form-group">
+            {{form.phone.label(class="form-control-label")}}{{form.phone(class="form-control form-control-lg")}} <br>
+        </div>
+
+        <div class="form-group">
+            {{form.email.label(class="form-control-label")}}{{form.email(class="form-control form-control-lg")}} <br>
+
+        </div>
+
+        <div class="form-group">
+            {{form.password.label(class="form-control-label")}}{{form.password(class="form-control form-control-lg")}} <br>
+
+        </div>
+
+        <div class="form-group">
+            {{form.pass_confirm.label(class="form-control-label")}}{{form.pass_confirm(class="form-control form-control-lg")}} <br>
+
+        </div>
+        
+
+        {{form.submit(class="btn btn-success btn-block")}}
+
+    </form>
+</div>
+</div>
+
+{% endblock %}

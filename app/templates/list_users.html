@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+
+  <div class="container"> 
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+        <h1>Users Registered</h1>
+        </div>
+      </div>
+      </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Email</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Registration Date</th>
+              <th>Admin</th>
+              <th>Change</th>
+
+          <tr>
+      </thead>
+      <tbody>
+          {% for u in users %}
+          <tr>
+              <td>{{ u.id }}</td>
+              <td>{{ u.email }}</td>
+              <td>{{ u.name }}</td>
+              <td>{{ u.phone }}</td>
+              <td>{{ u.date }}</td>
+              <td>{{ u.admin }}</td>
+              <td> 
+                <a class="btn btn-danger" href="{{url_for('users.delete_user', user_id=u.id)}}"> Delete</a>
+              
+                </td>
+
+              
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+
+
+</div>
+{% endblock %}
