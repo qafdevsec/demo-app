@@ -1,13 +1,12 @@
-def img
-pipeline {
+spipeline {
     environment {
         registry = "leandro2m/demo-app"
         registryCredential = "docker-credentials"
     }
-    agent  { dockerfile true }
+    agent  any
 
     stages {
-        stage('build checkout') {
+        stage('Build') {
             steps {
                 script {
                     img = registry + ":${env.BUILD_ID}"
