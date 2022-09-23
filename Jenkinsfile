@@ -16,11 +16,6 @@ pipeline {
                 }
             }
         }
-        stage ("Testing - running in Jenkins Node") {
-            steps {
-                sh "docker run -d --name ${JOB_NAME} -p 8080:8080 ${img}"
-            }
-        }
         stage ("Push to DockerHub") {
             steps {
                 script {
