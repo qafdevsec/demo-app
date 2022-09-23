@@ -1,7 +1,7 @@
 pipeline {
     environment {
         registry = "leandro2m/demo-app"
-        registryCredential = "docker-credentials"
+        registryCredential = "leandro2m"
     }
     agent  any
 
