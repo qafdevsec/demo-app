@@ -1,4 +1,4 @@
-spipeline {
+pipeline {
     environment {
         registry = "leandro2m/demo-app"
         registryCredential = "docker-credentials"
