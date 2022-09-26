@@ -2,18 +2,4 @@ version: v1
 
 id:
   org: 3ddbb870-245c-4042-9ab4-3af3edc12df3
-  app: 26c9688b-546b-45ae-b798-9f59474bdcda
-
-scanners:
-- sast
-- dast
-- secret
-- sca
-
-languages:
-- python
-
-dast:
-  url: http://ab6f9c2e383f54d9f82e696a33866ee9-784041794.us-east-1.elb.amazonaws.com:8088
-  fortipentest_scanner: false #true|false Set to true if you have a FortiPenTest license.
-  full_scan: false #true|false
+  app: 8ddab986-e5df-4a20-9e65-232d8c8f4027
