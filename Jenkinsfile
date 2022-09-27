@@ -33,6 +33,14 @@ pipeline {
                 }
             }
         }
+        stage('Deploying EKS Cluster') {
+            steps {
+                script {
+                    sh 'kubectl set image deployment demo-app demo-app="${img}"'
+                }
+            }
+        }
+    
     }
  
 }

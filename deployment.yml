@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: app-flask
+  name: demo-app
   labels:
-    app: app-python
+    app: demo-app
   namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: app-python
+      app: demo-app
   template:
     metadata:
       labels:
-        app: app-python
+        app: demo-app
     spec:
       containers:
-        - name: app-python
-          image: leandro2m/app-python
+        - name: demo-app
+          image: leandro2m/demo-app:30
           ports:
           - name: backend-port
             containerPort: 8080
