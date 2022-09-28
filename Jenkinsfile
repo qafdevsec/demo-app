@@ -33,14 +33,13 @@ pipeline {
                 }
             }
         }
-        stage('Deploying EKS Cluster') {
-            steps {
-                script {
-                    sh 'kubectl set image deployment demo-app demo-app="${img}"'
-                }
+          stage('Dump merged config') {
+            withKubeCredentials([
+                [credentialsId: 'TOKEN', serverUrl: 'EKS_SERVER'],
+            ]) {
+              sh 'kubectl config view'
             }
         }
-    
     }
  
 }
