@@ -33,11 +33,11 @@ pipeline {
                 }
             }
         }
-        stage ("List Pods") {
-            withKubeConfig([credentialsId: "${TOKEN}") {
-                sh 'kubectl get pods'
-            }
-        }
+        // stage ("List Pods") {
+        //     withKubeConfig([credentialsId: "${TOKEN}") {
+        //         sh 'kubectl get pods'
+        //     }
+        // }
     }
  
 }
