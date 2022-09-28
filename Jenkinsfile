@@ -33,7 +33,7 @@ pipeline {
                 }
             }
         }
-          stage('Dump merged config') {
+        stage('Dump merged config') {
             withKubeCredentials([
                 [credentialsId: 'TOKEN', serverUrl: 'EKS_SERVER'],
             ]) {
