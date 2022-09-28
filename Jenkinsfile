@@ -34,7 +34,9 @@ pipeline {
             }
         }
         stage ("List Pods") {
-            withKubeConfig([credentialsId: "${TOKEN}")
+            withKubeConfig([credentialsId: "${TOKEN}") {
+                sh 'kubectl get pods'
+            }
         }
     }
  
