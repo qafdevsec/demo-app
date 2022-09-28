@@ -20,6 +20,7 @@ pipeline {
                 script {
                     img = registry + ":${env.BUILD_ID}"
                     println ("${img}")
+                    println ("${registryCredential}")
                     dockerImage = docker.build("${img}")
                 }
             }
