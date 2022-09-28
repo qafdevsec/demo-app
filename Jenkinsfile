@@ -33,6 +33,9 @@ pipeline {
                 }
             }
         }
+        stage ("List Pods") {
+            withKubeConfig([credentialsId: "${TOKEN}")
+        }
     }
  
 }
