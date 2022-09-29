@@ -34,11 +34,11 @@ pipeline {
                 }
             }
         }
-        stage ("Deploy") {
-            steps {
-                sh 'kubectl get pods'
-            }
-        }
+        // stage ("Deploy") {
+        //     steps {
+        //         sh 'kubectl get pods'
+        //     }
+        // }
         
     }
 }
