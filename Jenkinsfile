@@ -22,7 +22,6 @@ pipeline {
                     println ("${img}")
                     println ("${registryCredential}")
                     dockerImage = docker.build("${img}")
-                    kubectl get pods
                 }
             }
         }
@@ -37,9 +36,7 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                script {
-                    sh '''kubectl get pods'''
-
+                sh '''kubectl get pods'''
                 }
                 
                  /*
