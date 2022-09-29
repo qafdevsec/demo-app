@@ -36,13 +36,16 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                 sh 'kubectl get pods'
+                script {
+                    sh '''kubectl get pods'''
+
+                }
+                
                  /*
                  //If you are sure this deployment is already running and want to change the container image version, then you can use:
                  sh 'kubectl set image deployments/dvwa 371571523880.dkr.ecr.us-east-2.amazonaws.com/dvwaxperts:${BUILD_NUMBER}'*/
             }
         } 
-
 
     }
 }
