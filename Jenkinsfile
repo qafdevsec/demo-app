@@ -34,18 +34,11 @@ pipeline {
                 }
             }
         }
-        // stage ("Deploy") {
-        //     steps {
-        //         sh 'kubectl get pods'
-        //     }
-        // }
+        stage ("Deploy") {
+            steps {
+                sh 'kubectl get pods'
+            }
+        }
         
     }
-}
-node {
-  stage('Apply Kubernetes files') {
-    withKubeConfig([credentialsId: 'TOKEN', serverUrl: 'https://api.k8s.my-company.com']) {
-      sh 'kubectl apply -f deployment.yml'
-    }
-  }
 }
