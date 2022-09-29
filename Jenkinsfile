@@ -37,7 +37,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 withKubeConfig() {
-                    sh '''kubectl get pods'''
+                    sh "kubectl get pods"
                 }
                 
                  /*
