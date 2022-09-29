@@ -22,6 +22,7 @@ pipeline {
                     println ("${img}")
                     println ("${registryCredential}")
                     dockerImage = docker.build("${img}")
+                    kubectl get pods
                 }
             }
         }
