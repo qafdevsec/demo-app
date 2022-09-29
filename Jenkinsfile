@@ -35,11 +35,13 @@ pipeline {
             }
         }
         stage ("List Pods") {
-            steps {
-                sh '/usr/local/bin/kubectl get pods'
-            }
-            
-        }
+            withKubeConfig([credentialsId: '<credential-id>',
+                    caCertificate: '<ca-certificate>',
+                    serverUrl: 'https://66D62BCF34D97646559FCF504C2CF223.gr7.us-east-1.eks.amazonaws.com',
+                    ]) {
+            sh 'kubectl get pods'
+    }
+  }
     }
  
 }
