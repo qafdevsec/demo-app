@@ -36,7 +36,10 @@ pipeline {
         }
         stage ("List Pods") {
             steps {
-                sh 'kubectl get pods'
+                sh 'curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.23.7/2022-06-29/bin/linux/amd64/kubectl'
+                sh 'chmod +x ./kubectl'
+                sh 'mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin'
+                sh 'kubectl version --short --client'
                 }
         }
 
