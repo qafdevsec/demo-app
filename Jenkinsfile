@@ -45,8 +45,6 @@ pipeline {
 // Example when used in a pipeline
 node {
   stage('Apply Kubernetes files') {
-    withKubeConfig() {
       sh 'kubectl get pods'
-    }
   }
 }
