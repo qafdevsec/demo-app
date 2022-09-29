@@ -6,13 +6,6 @@ pipeline {
     agent  any
 
     stages {
-        stage('Clone repository') { 
-            steps { 
-                script{
-                checkout scm
-                }
-            }
-        } 
         // stage('SAST') {
         //     steps {
         //         script {
@@ -35,8 +28,8 @@ pipeline {
         stage ("Push to DockerHub") {
             steps {
                 script {
-                    docker.withRegistry("https://registry.hub.docker.com", 'leandro2m') {
-                        dockerImage.push("${img}")
+                    docker.withRegistry("https://registry.hub.docker.com", registryCredential) {
+                        dockerImage.push()
                     }
                 }
             }
