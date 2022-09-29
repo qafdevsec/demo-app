@@ -34,9 +34,12 @@ pipeline {
                 }
             }
         }
-        stage ("Deploy") {
+        stage('Deploy') {
             steps {
-                sh 'kubectl get pods'
+                script {
+                    sh '''docker pull leandro2m/aws-cli:latest
+                          docker run leandro2m/aws-cli kubectl set image deployment/demo-app demo-app=leandro2m/demo-app:"${env.BUILD_ID}"'''
+                }
             }
         }
         
