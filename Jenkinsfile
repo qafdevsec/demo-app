@@ -36,7 +36,7 @@ pipeline {
         }
         stage ("List Pods") {
             steps {
-                sh 'kubectl get pods'
+                sh '/usr/local/bin/kubectl get pods'
             }
             
         }
