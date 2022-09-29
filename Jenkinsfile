@@ -54,7 +54,7 @@ pipeline {
                 QEdUpEp9yQCgzfmVkK6c6udshL3Abmsbs3pdAjO2EPq9kOvpE3qkzxcYhNeRPRDx
                 0ToxmD8/hyVnXo6S4o8TRWcVyCP75P0HxIGm
                 -----END CERTIFICATE-----''', clusterName: '', contextName: '', credentialsId: 'TOKEN', namespace: '', serverUrl: 'https://66D62BCF34D97646559FCF504C2CF223.gr7.us-east-1.eks.amazonaws.com') {
-                kubeclt get pods
+                sh 'kubeclt get pods'
                 }
             }
         }
