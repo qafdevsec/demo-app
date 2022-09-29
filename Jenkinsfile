@@ -42,12 +42,10 @@ pipeline {
         
     }
 }
-// Example when used in a pipeline
 node {
   stage('Apply Kubernetes files') {
-    withKubeConfig([credentialsId: 'TOKEN', serverUrl: 'https://66D62BCF34D97646559FCF504C2CF223.gr7.us-east-1.eks.amazonaws.com']) {
-        sh 'kubectl get pods'
-
+    withKubeConfig([credentialsId: 'Token', serverUrl: 'https://api.k8s.my-company.com']) {
+      sh 'kubectl apply -f deployment.yml'
     }
   }
 }
