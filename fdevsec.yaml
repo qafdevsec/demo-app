@@ -9,6 +9,7 @@ scanners:
 # - dast
 - secret
 - sca
+- container
 
 languages:
 - python
