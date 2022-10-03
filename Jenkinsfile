@@ -34,6 +34,9 @@ pipeline {
                 }
             }
         }
+        stage ("FortiCNP Image Scan") {
+            fortiCWPScanner block:: true, imageName: "${img}"
+        }
         stage('Deploy') {
             steps {
                 script {
