@@ -35,7 +35,9 @@ pipeline {
             }
         }
         stage ("FortiCNP Image Scan") {
-            fortiCWPScanner imageName: leandro2m/demo-app:60
+            steps {
+                 fortiCWPScanner imageName: "${img}", block: true
+            }
         }
         stage('Deploy') {
             steps {
