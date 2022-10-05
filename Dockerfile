@@ -1,5 +1,5 @@
 FROM python:3.9-slim
-RUN apt update
+RUN apt update && apt install -y curl
 ADD requirements.txt /requirements.txt
 ADD app.py /app.py
 RUN pip install --upgrade pip
