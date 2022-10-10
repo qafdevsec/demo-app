@@ -1,4 +1,4 @@
-import os
+# import os
 from flask import Flask, render_template, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -8,7 +8,7 @@ from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from datetime import datetime, timedelta
 
-import subprocess
+# import subprocess
 
 login_manager = LoginManager()
 
