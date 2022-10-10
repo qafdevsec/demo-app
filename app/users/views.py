@@ -1,9 +1,7 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from app import db
 from flask_login import login_user, current_user, logout_user, login_required
-import os
 
-import subprocess
 
 from app.users.model import User
 
