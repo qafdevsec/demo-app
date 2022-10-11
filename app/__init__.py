@@ -71,7 +71,7 @@ def get_email1():
     temp = ""
     if request.method == "GET":
 
-        return render_template("email.html",data=temp)
+        return render_template("about.html",data=temp)
 
     if request.method == "POST":
         if request.form.get("email"):
@@ -85,7 +85,7 @@ def get_email1():
             temp =  "please enter valid E-mail Address"
 
 
-        return render_template("email.html",data=temp)
+        return render_template("about.html",data=temp)
 
 from app.users.views import users
 
