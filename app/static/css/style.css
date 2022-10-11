@@ -24,6 +24,9 @@ a:active {
 .clear {
 	clear:both;
 }
+p {
+	font-size: 16px;
+}
 
 h1,h2, h3, h4, h5, h6 {
 	font-family:'Open Sans', Arial, sans-serif;
@@ -981,7 +984,7 @@ ul.link-list li{
 	list-style:none;
 }
 footer{
-background: #046E5A;
+background: #ff0000;
 }
 footer ul.link-list li a{
 	color:#fff;
