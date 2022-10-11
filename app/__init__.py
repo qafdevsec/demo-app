@@ -66,12 +66,12 @@ login_manager.login_view = "users.login"
 def index():
     return render_template('home.html')
 
-@app.route("/flaw", methods=["GET","POST"])
+@app.route("/subscribe", methods=["GET","POST"])
 def get_email1():
     temp = ""
     if request.method == "GET":
 
-        return render_template("about.html",data=temp)
+        return render_template("subscribe.html",data=temp)
 
     if request.method == "POST":
         if request.form.get("email"):
@@ -85,7 +85,7 @@ def get_email1():
             temp =  "please enter valid E-mail Address"
 
 
-        return render_template("about.html",data=temp)
+        return render_template("home.html",data=temp)
 
 from app.users.views import users
 
