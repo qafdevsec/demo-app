@@ -73,6 +73,14 @@ def login():
             
     return render_template('login.html', form=form, error=error)
 
+@users.route('/flaw', methods=['GET','POST'])
+def hello_xss():
+    name = "world"
+    template = 'unsafe.html' 
+    if request.args.get('name'):
+        name = request.args.get('name')
+    return render_template(template, name=name)
+
 @users.route("/logout")
 def logout():
     logout_user()

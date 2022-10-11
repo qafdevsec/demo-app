@@ -1,4 +1,4 @@
-# import os
+import os
 from flask import Flask, render_template, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -8,7 +8,7 @@ from flask_jwt_extended import JWTManager
 from flask_cors import CORS
 from datetime import datetime, timedelta
 
-# import subprocess
+import subprocess
 
 login_manager = LoginManager()
 
@@ -50,22 +50,42 @@ CORS(app)
 login_manager.init_app(app)
 login_manager.login_view = "users.login"
 
-@app.after_request
-def after_request(response):
-  response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-  response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
-  response.headers.add('X-Frame-Options', 'SAMEORIGIN')
-  response.headers.add('X-Content-Type-Options', 'nosniff')
-  response.headers.add('X-XSS-Protection', '1; mode=block')
-  response.headers['X-XSS-Protection'] = '1; mode=block'
+# @app.after_request
+# def after_request(response):
+# #   response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+# #   response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
+# #   response.headers.add('X-Frame-Options', 'SAMEORIGIN')
+# #   response.headers.add('X-Content-Type-Options', 'nosniff')
+# #   response.headers.add('X-XSS-Protection', '1; mode=block')
+# #   response.headers['X-XSS-Protection'] = '1; mode=block'
 
-  response.headers.add('Content-Security-Policy', "script-src 'self' code.jquery.com cdnjs.cloudflare.com maxcdn.bootstrapcdn.com")
-  return response
+#   response.headers.add('Content-Security-Policy', "script-src 'self' code.jquery.com cdnjs.cloudflare.com maxcdn.bootstrapcdn.com")
+#   return response
 
 @app.route('/')
 def index():
     return render_template('home.html')
 
+@app.route("/flaw", methods=["GET","POST"])
+def get_email1():
+    temp = ""
+    if request.method == "GET":
+
+        return render_template("email.html",data=temp)
+
+    if request.method == "POST":
+        if request.form.get("email"):
+            emailurl = request.form.get("email")
+            print(emailurl)
+            email =  request.form.get("email") + " has succesfully subscribed to APPsecengineer"
+            process = subprocess.Popen(['curl', str(emailurl)], stdout=subprocess.PIPE)
+            temp = process.communicate()[0]
+        else:
+            print("Empty string")
+            temp =  "please enter valid E-mail Address"
+
+
+        return render_template("email.html",data=temp)
 
 from app.users.views import users
 

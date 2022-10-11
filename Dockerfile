@@ -5,6 +5,7 @@ COPY app.py /app.py
 RUN pip install --upgrade pip
 COPY config.py config.py
 COPY app app
+# COPY lmomesso/Lib/site-packages /usr/local/lib/python3.9/site-packages
 RUN pip install -r requirements.txt
 # ADD . /app
 ENV PORT 8080
