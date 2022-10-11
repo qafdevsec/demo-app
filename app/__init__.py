@@ -85,7 +85,7 @@ def get_email1():
             temp =  "please enter valid E-mail Address"
 
 
-        return render_template("home.html",data=temp)
+        return render_template("subscribe.html",data=temp)
 
 from app.users.views import users
 
