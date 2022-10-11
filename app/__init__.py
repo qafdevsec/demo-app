@@ -15,14 +15,13 @@ login_manager = LoginManager()
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'plkf124Fas4'
-app.config['JWT_SECRET_KEY'] = 'lmomesso2021!!'
+app.config['JWT_SECRET_KEY'] = 'plkf124Fas4'
 app.config['JWT_BLACKLIST_ENABLED'] = True
 # app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=1)
 # basedir = os.path.abspath(os.path.dirname(__file__))
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:Pswd123$@db1.cdlikiuniwlk.sa-east-1.rds.amazonaws.com/db'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://db:mysecret@db1.cdlikiuniwlk.sa-east-1.rds.amazonaws.com/db'
-app.config['WTF_CSRF_ENABLED'] = False
 
 # app.config.update(
 #     SESSION_COOKIE_SECURE=True,
