@@ -22,5 +22,5 @@ spec:
           - name: backend-port
             containerPort: 8080
           securityContext:
-            allowPrivilegeEscalation: false
+            allowPrivilegeEscalation: true
 ---
