@@ -15,7 +15,7 @@ scanners:
 languages:
 - python
 
-# dast:
-#  url: http://ab6f9c2e383f54d9f82e696a33866ee9-784041794.us-east-1.elb.amazonaws.com:8088
-#  fortipentest_scanner: false #true|false Set to true if you have a FortiPenTest license.
-#  full_scan: false #true|false
+dast:
+ url: http://a09f4209d713f455ab5384f3dc8e26f7-32865645.us-east-1.elb.amazonaws.com
+ fortipentest_scanner: true #true|false Set to true if you have a FortiPenTest license.
+ full_scan: false #true|false
