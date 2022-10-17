@@ -6,7 +6,7 @@ id:
 
 scanners:
 - sast
-# - dast
+- dast
 - secret
 - sca
 - container
