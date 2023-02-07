@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    health-check-ctrl: enable
+    health-check-list: LB_HLTHCK_ICMP
+    health-check-relation: OR
+    real-server-ssl-profile: NONE
+  name: svc-flawed-app
+  namespace: default
+spec:
+  ports:
+  - port: 1246
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: demo-app
+  type: NodePort
