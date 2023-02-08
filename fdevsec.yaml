@@ -5,17 +5,17 @@ id:
   app: 5b1d5c1f-6d74-4959-adc0-bea5894ddf32
 
 scanners:
-- sast
-- dast
-- secret
-- sca
-- container
-- iac
+  - sast
+  - dast
+  - secret
+  - sca
+  - container
+  - iac
 
 languages:
-- python
+  - python
 
 dast:
  url: http://a09f4209d713f455ab5384f3dc8e26f7-32865645.us-east-1.elb.amazonaws.com
- fortipentest_scanner: false #true|false Set to true if you have a FortiPenTest license.
- full_scan: false #true|false
+#  fortipentest_scanner: false #true|false Set to true if you have a FortiPenTest license.
+ full_scan: true #true|false
