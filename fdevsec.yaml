@@ -9,13 +9,13 @@ scanners:
 - dast
 - secret
 - sca
-- container
+# - container
 - iac
 
 languages:
  - python
 
 dast:
- url: http://a09f4209d713f455ab5384f3dc8e26f7-32865645.us-east-1.elb.amazonaws.com
+ url: http://ac4b21a3c528348e6b65acb8988b5803-445411073.us-east-1.elb.amazonaws.com
 #  fortipentest_scanner: false #true|false Set to true if you have a FortiPenTest license.
  full_scan: true #true|false
