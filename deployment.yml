@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: demo-app
-          image: leandro2m/demo-app:30
+          image: leandro2m/demo-app:124
           ports:
           - name: backend-port
             containerPort: 8080
