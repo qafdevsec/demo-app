@@ -1,19 +1,15 @@
 version: v1
 
 id:
-  org: 3ddbb870-245c-4042-9ab4-3af3edc12df3
-  app: ea0b67b3-2034-451d-9043-697d3d588b72
+  org: 398f24ca-1722-4517-b9c5-be430d1a6e8d
+  app: 19ed0593-5cf0-447f-80ef-aab9892f898f
 
 scanners:
-- sast
-- dast
-- secret
-- sca
-# - container
-- iac
+  - sast
+  - container
 
 languages:
- - python
+  - python
 
 dast:
  url: http://ac4b21a3c528348e6b65acb8988b5803-445411073.us-east-1.elb.amazonaws.com
