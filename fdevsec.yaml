@@ -6,7 +6,6 @@ id:
 
 scanners:
   - sast
-  - container
 
 languages:
   - python
