@@ -10,6 +10,6 @@ id:
 # languages:
 #   - python
 
-dast:
- url: https://xss-game.appspot.com
+#dast:
+ #url: https://xss-game.appspot.com
 #  fortipentest_scanner: false #true|false Set to true if you have a FortiPenTest license.
