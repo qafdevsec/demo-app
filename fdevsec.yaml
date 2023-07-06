@@ -3,14 +3,14 @@ version: v1
 id:
   org: a5a689b2-46a9-4f09-a29a-ea7791de945f
   app: 6ba6d57c-32f8-48ee-ab0f-8e6338a66ff5
+scanners:
+  - sast
 
-
-# scanners:
-#   - sast
-
-# languages:
-#   - python
-
+languages:
+  - python
+  
+fail_pipeline:
+  risk_rating: 8
 #dast:
  #url: https://xss-game.appspot.com
 #  fortipentest_scanner: false #true|false Set to true if you have a FortiPenTest license.
