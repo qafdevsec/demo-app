@@ -9,7 +9,7 @@ languages:
   - python
   
 fail_pipeline:
-  risk_rating: 8
+  risk_rating: 4
 #dast:
  #url: https://xss-game.appspot.com
 #  fortipentest_scanner: false #true|false Set to true if you have a FortiPenTest license.
