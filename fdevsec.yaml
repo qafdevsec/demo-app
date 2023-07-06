@@ -5,8 +5,10 @@ id:
 scanners:
   - sast
 
-languages:
-  - python
+#languages:
+#  - python
+resource:
+  serial_scan: false
   
 fail_pipeline:
   risk_rating: 4
