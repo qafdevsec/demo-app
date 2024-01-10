@@ -1,6 +1,6 @@
 id:
   org: 552d9bfd-0c60-43aa-9921-fdcdb13f347f
-  app: 55e5f133-cbc8-493d-a6fd-e42ccf2a7a40
+  app: 79e888c3-75dd-46c5-b4f2-5500d6710404 
 
 # If below settings are not configured, scans will be performed for all supported scanners.
 scanners:
