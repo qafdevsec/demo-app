@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.13.0a6-slim
 RUN apt update && apt install -y curl
 COPY requirements.txt /requirements.txt
 COPY app.py /app.py
